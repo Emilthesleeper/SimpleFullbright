@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "simplefullbright",
+  "version": "${version}",
+  "name": "Simple Fullbright",
+  "description": "This is an oversimplified Fullbright Mod",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/simplefullbright/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.emilsleeper.simplefullbright.client.SimplefullbrightDataGenerator"
+    ],
+    "client": [
+      "com.emilsleeper.simplefullbright.client.SimplefullbrightClient"
+    ],
+    "main": [
+      "com.emilsleeper.simplefullbright.Simplefullbright"
+    ]
+  },
+  "mixins": [
+    "simplefullbright.mixins.json",
+    {
+      "config": "simplefullbright.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
